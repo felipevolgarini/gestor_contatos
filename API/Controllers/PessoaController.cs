@@ -43,19 +43,7 @@ namespace GestorContatos.Controllers
             {
                 message = "Pessoa cadastrada com sucesso."
             });
-        }
-
-        [Route("adicionar")]
-        [HttpPost]
-        public IActionResult Adicionar(Pessoa model)
-        {
-            _pessoaService.AdicionarPessoa(model);
-
-            return Ok(new
-            {
-                message = "Pessoa cadastrada com sucesso."
-            });
-        }
+        }        
 
         [Route("login")]
         [HttpPost]
@@ -76,6 +64,19 @@ namespace GestorContatos.Controllers
             return Ok(new
             {
                 token = token
+            });
+        }
+
+        [Route("adicionar")]
+        [Authorize]
+        [HttpPost]
+        public IActionResult Adicionar(Pessoa model)
+        {
+            _pessoaService.AdicionarPessoa(model);
+
+            return Ok(new
+            {
+                message = "Pessoa cadastrada com sucesso."
             });
         }
 

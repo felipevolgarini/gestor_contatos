@@ -36,7 +36,7 @@ options.success = function (data) {
     var data = aux[2] + "/" + aux[1] + "/" + aux[0];
 
     $("#nome").val(pessoa.nome);
-    $("#dataNascimento").val(pessoa.dataNascimento);
+    $("#dataNascimento").val(data);
     
     if (pessoa.telefones) {
         pessoa.telefones.forEach(function (telefone) {
