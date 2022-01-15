@@ -1,0 +1,29 @@
+﻿@{ 
+    ViewData["Title"] = "Pessoas Cadastradas"; 
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/lib/dataTables/dataTables.bootstrap4.min.css">
+}
+
+@section Scripts {
+    <script src="~/lib/dataTables/jquery.dataTables.min.js"></script>
+    <script src="~/lib/dataTables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/js/PessoaListarTodas.js"></script>
+}
+
+<h1>
+    Pessoas Cadastradas
+    <span id="btnMais" style="margin-left:400px">
+        <button type="button" class="btn btn-primary" onclick="buscar()">Apenas com mais de 1 telefone</button>
+    </span>
+    <span id="btnTodas" style="margin-left:400px;display: none;">
+        <button type="button" class="btn btn-info" onclick="buscar()">Listar Todas</button>
+    </span>
+</h1>
+
+<div style="margin-top:30px" id="resultado">
+  
+</div>
+
+

@@ -1,0 +1,40 @@
+﻿@{ ViewData["Title"] = "Adicionar Pessoa"; }
+
+@section Styles {
+    <link rel="stylesheet" href="~/lib/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="~/lib/jquery-ui/jquery.timepicker.min.css">
+}
+
+@section Scripts {
+    <script src="~/js/PessoaAdicionar.js"></script>
+    <script src="~/lib/jquery-mask/jquery-mask.min.js"></script>
+}
+
+<h1>Adicionar Pessoa</h1>
+
+<form id="form-adicionar">
+    <div class="row">
+        <div class="col-md-6">
+            <div id="form-telefone">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome">
+                </div>
+                <div class="form-group">
+                    <label for="dataNascimento">Data de Nascimento</label>
+                    <input type="text" class="form-control" id="dataNascimento" placeholder="Ex: 19/06/1984">
+                </div>
+                <div class="form-group">
+                    <label for="telefone1">Telefone 1</label>
+                    <input type="text" class="form-control" id="telefone1">
+                </div>
+            </div>
+            
+           
+
+            <button type="button" class="btn btn-sm btn-info" id="adicionarTelefone" onclick="AdicionarTelefone()"> + Adicionar Telefone</button>
+            <br /><br />
+            <button class="btn btn-primary" id="salvar">Salvar</button>
+        </div>
+    </div>
+</form>

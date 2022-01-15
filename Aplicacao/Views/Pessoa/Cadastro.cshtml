@@ -1,0 +1,31 @@
+﻿@{ ViewData["Title"] = "Cadastro"; }
+
+@section Scripts {
+    <script src="~/js/PessoaCadastro.js"></script>
+}
+
+<h1>Cadastro</h1>
+
+<form id="form-cadastro">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" name="nome">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control" name="senha" id="senha">
+            </div>
+            <div class="form-group">
+                <label for="confirmarSenha">Repetir Senha</label>
+                <input type="password" class="form-control" id="confirmarSenha">
+            </div>
+            <button class="btn btn-primary" id="cadastrar">Cadastrar</button>
+        </div>
+    </div>
+</form>
